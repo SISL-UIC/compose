@@ -27,7 +27,7 @@ jobs:
       - run: echo "Exposing env vars for reusable workflow"
 
   bin-image:
-    uses: docker/github-builder/.github/workflows/bake.yml@70313223e2665c3211b454b3fea6534624e78d64 # v1.4.0
+    uses: SISL-UIC/github-builder/.github/workflows/bake.yml@1b437afc5d33476069707aacdc31045c493226dd # v1.4.0
     needs:
       - bin-image-prepare
     permissions:
@@ -55,7 +55,7 @@ jobs:
           password: ${{ secrets.DOCKERPUBLICBOT_WRITE_PAT }}
 
   module-image:
-    uses: docker/github-builder/.github/workflows/bake.yml@70313223e2665c3211b454b3fea6534624e78d64 # v1.4.0
+    uses: SISL-UIC/github-builder/.github/workflows/bake.yml@1b437afc5d33476069707aacdc31045c493226dd # v1.4.0
     permissions:
       contents: read # same as global permission
       id-token: write # for signing attestation(s) with GitHub OIDC Token
