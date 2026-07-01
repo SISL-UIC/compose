@@ -45,7 +45,7 @@ jobs:
           make ${{ matrix.target }}
 
   binary:
-    uses: SISL-UIC/github-builder/.github/workflows/bake.yml@92b94c97a5584c61b1d70e0ae79293181154146b # v1.4.0
+    uses: SISL-UIC/github-builder/.github/workflows/bake.yml@6814e36f7259b6fc994d7be97136aef82ac4ecc4 # v1.4.0
     permissions:
       contents: read # same as global permission
       id-token: write # for signing attestation(s) with GitHub OIDC Token
@@ -111,7 +111,7 @@ jobs:
 
   bin-image-test:
     if: github.event_name == 'pull_request'
-    uses: SISL-UIC/github-builder/.github/workflows/bake.yml@92b94c97a5584c61b1d70e0ae79293181154146b # v1.4.0
+    uses: SISL-UIC/github-builder/.github/workflows/bake.yml@6814e36f7259b6fc994d7be97136aef82ac4ecc4 # v1.4.0
     with:
       runner: amd64
       target: image-cross
